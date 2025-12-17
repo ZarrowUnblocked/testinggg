@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Embed with timed swap</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #111; color: #eee; }
+    iframe { width: 100%; height: 400px; border: none; margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+  <!-- First iframe loads immediately -->
+  <iframe id="first" src="https://alittlechristmasgift.eminescusm.ro/x.html"></iframe>
+
+  <script>
+    setTimeout(() => {
+      const second = document.createElement('iframe');
+      second.src = "https://alittlechristmasgift.eminescusm.ro/scramjet/https://google.com";
+      document.body.appendChild(second);
+    }, 5000); // 5 seconds
+  </script>
+</body>
+</html>
